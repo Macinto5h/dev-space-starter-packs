@@ -1,0 +1,18 @@
+nav.site-nav.navbar
+    .navbar-content
+        button.btn.btn-action(type='button')
+            span.oi(data-glyph="menu" aria-hidden="true")
+            span.sr-only Toggle sidebar
+    a.navbar-brand(href='#')
+        | Brand Name Here
+    ul.navbar-nav.d-none.d-md-flex
+        li.nav-item.active
+            a.nav-link(href='#') Link 1
+        li.nav-item
+            a.nav-link(href='#') Link 2
+        li.nav-item
+            a.nav-link(href='#') Link 3
+    .navbar-content.ml-auto
+        button.btn.btn-action(type='button' onclick='halfmoon.toggleDarkMode()' aria-label='Toggle dark mode')
+            span.oi(data-glyph="moon" aria-hidden="true")
+            span.sr-only Toggle dark mode

@@ -1,0 +1,171 @@
+extends ./layouts/page
+
+block vars
+    - var title = 'Index'
+
+block content
+    .container
+        //- Breadcrumb
+        nav(aria-label="Breadcrumb navigation example")
+            ul.breadcrumb
+                li.breadcrumb-item
+                    a(href="#") Home
+                li.breadcrumb-item
+                    a(href="#") Docs
+                li.breadcrumb-item.active(aria-current="page")
+                    a(href="#") Breadcrumb
+        //- Headings
+        h1 H1 Header
+        h2 H2 Header
+        h3 H3 Header
+        h4 H4 Header
+        h5 H5 Header
+        h6 H6 Header
+        //- Buttons
+        button.btn(type='button') Default
+        button.btn.btn-primary(type='button') Primary
+        button.btn.btn-secondary(type='button') Secondary
+        button.btn.btn-success(type='button') Success
+        button.btn.btn-danger(type='button') Danger
+        button.btn.btn-link(type='button') Link
+        //- Code
+        code 10 + 5 = 15
+        //- Keyboard Input
+        kbd shift
+        | +
+        kbd S
+        //- Table
+        table.table
+            thead
+                tr
+                    th #
+                    th First
+                    th last
+                    th.text-right Age
+            tbody
+                tr
+                    th 1
+                    td John
+                    td Doe
+                    td.text-right 25
+                tr
+                    th 2
+                    td Jane
+                    td Violet
+                    td.text-right 27
+                tr 
+                    th 3
+                    td Jack
+                    td Gates
+                    td.text-right 33
+        //- Form
+        form(action="..." method="..." class="w-400 mw-full")
+            //- Input
+            .form-group 
+                label.required(for="full-name") Full name
+                input.form-control#full-name(type="text" placeholder="Full name" required="required")
+
+            //- Radio
+            .form-group
+                label.required(for="gender-male") Gender
+                .custom-radio
+                    input#gender-male(type="radio" name="gender" value="male" required="required")
+                    label(for="gender-male") Male
+                .custom-radio
+                    input#gender-female(type="radio" name="gender" value="female" required="required")
+                    label(for="gender-female") Female
+                .custom-radio
+                    input#gender-other(type="radio" name="gender" value="other" required="required")
+                    label(for="gender-other") Other
+            
+            //- Select
+            .form-group
+                label.required(for="area-of-specialization") Area of specialization
+                select.form-control#area-of-specialization(required="required")
+                    option(value="" selected="selected" disabled="disabled") Select your area of specialization
+                    option(value="front-end") Front-end
+                    option(value="back-end") Back-end
+                    option(value="full-stack") Full-stack
+
+            //- Multi-select
+            .form-group
+                label.required(for="languages") Languages
+                select.form-control#languages(multiple="multiple" required="required" size="5")
+                    option(value="javascript") Javascript
+                    option(value="python") Python
+                    option(value="php") PHP
+            
+            //- Textarea
+            .form-group
+                label(for="description") Description
+                textarea.form-control#description(placeholder="Write a short description about yourself.")
+            
+            //- File input
+            .form-group
+                label.required(for="picture") Display picture
+                .custom-file
+                    input#picture(type="file" required="required")
+                    label(for="picture") Choose picture
+
+            //- Switch
+            .form-group
+                .custom-switch
+                    input#remember-my-information(type="checkbox")
+                    label(for="remember-my-information") Remember my information
+
+            //- Checkbox
+            .form-group
+                .custom-checkbox
+                    input#agree-to-terms(type="checkbox")
+                    label(for="agree-to-terms")
+                        | I agree to all the 
+                        a(href="#") terms and conditions
+
+            //- Submit
+            input.btn.btn-primary(type="submit" value="Submit")
+
+            //- Alerts
+            .alert(role="alert")
+                h4.alert-heading
+                | This is a default alert with some content and
+                a.alert-link(href="#") a link 
+                | .
+            .alert.alert-primary(role="alert")
+                h4.alert-heading
+                | This is a primary alert with some content and
+                a.alert-link(href="#") a link 
+                | .
+            .alert.alert-success(role="alert")
+                h4.alert-heading
+                | This is a success alert with some content and
+                a.alert-link(href="#") a link 
+                | .
+            .alert.alert-secondary(role="alert")
+                h4.alert-heading
+                | This is a secondary alert with some content and
+                a.alert-link(href="#") a link 
+                | .
+            .alert.alert-danger(role="alert")
+                h4.alert-heading
+                | This is a danger alert with some content and
+                a.alert-link(href="#") a link 
+                | .
+
+            //- Badges
+            span.badge Default
+            span.badge.badge-primary Primary
+            span.badge.badge-success Success
+            span.badge.badge-secondary Secondary
+            span.badge.badge-danger Danger
+            
+            //- Collapse
+            details.collapse-panel.w-400.mw-full
+                summary.collapse-header
+                    | Header 1
+                .collapse-content
+                    | Content 1
+            details.collapse-panel.w-400.mw-full.mt-20(open)
+                summary.collapse-header
+                    | Header 2
+                .collapse-content
+                    | Content 2

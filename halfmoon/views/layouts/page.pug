@@ -1,0 +1,17 @@
+doctype html
+html(lang="en")
+    block vars
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+        link(rel="stylesheet" type="text/css" href="/assets/css/style.css")
+        title #{title} - Halfmoon Starter Pack
+    body
+        .page-wrapper.with-navbar
+            include ../partials/header
+            main.content-wrapper
+                block content
+                include ../partials/footer
+        
+        //- Scripts
+        script(src='/assets/js/scripts.js')
